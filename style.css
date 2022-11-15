@@ -155,7 +155,7 @@ h1 {
     width: 550px;
     min-height: 850px;
     border: 1px black solid;
-    
+    margin: 0 auto;
 }
 
 a {

@@ -20,9 +20,9 @@ searchField.addEventListener("keypress", event => {
     }
 })
 
-function addWatchlistHandler(event) {
-    console.log(`Clicked add to watchlist from ${event.target.dataset.imdbid}!`)
-    let clickedMovie = searchResults.find(item => item.imdbID===event.target.dataset.imdbid)
+function addWatchlistHandler(movieid) {
+    console.log(`Clicked add to watchlist on imdb-id: ${movieid}!`)
+    let clickedMovie = searchResults.find(item => item.imdbID===movieid)
     console.log(clickedMovie)
     if(clickedMovie==undefined) {
         console.log("Something went wrong!")
@@ -40,7 +40,7 @@ function searchEventHandler(event) {
         fetch(`http://www.omdbapi.com/?apikey=f58da016&s=${searchTitle}&plot=full&type=movie`)
             .then(res => res.json())
             .then(data => {
-                // console.log(data)
+                console.log(data)
                 
                 if(data.Response==="True") {
 
@@ -63,7 +63,7 @@ function searchEventHandler(event) {
                                     <div class="info"> 
                                         <span>${item.Runtime}</span>
                                         <span>${item.Genre}</span>
-                                        <button onclick="addWatchlistHandler(event)" data-imdbid="${item.imdbID}" class="add-watchlist-btn"><img src="images/plus-icon.svg">Watchlist</button>
+                                        <button onclick="addWatchlistHandler('${item.imdbID}')" class="add-watchlist-btn"><img src="images/plus-icon.svg">Watchlist</button>
                                     </div>
                                     <p class="plot">${item.Plot}</p>
 
