@@ -21,9 +21,9 @@ searchField.addEventListener("keypress", event => {
 })
 
 function addWatchlistHandler(movieid) {
-    console.log(`Clicked add to watchlist on imdb-id: ${movieid}!`)
+    // console.log(`Clicked add to watchlist on imdb-id: ${movieid}!`)
     let clickedMovie = searchResults.find(item => item.imdbID===movieid)
-    console.log(clickedMovie)
+    // console.log(clickedMovie)
     if(clickedMovie==undefined) {
         console.log("Something went wrong!")
     } else {
@@ -37,10 +37,10 @@ function addWatchlistHandler(movieid) {
 function searchEventHandler(event) {
     searchTitle = searchField.value
     if(searchTitle) {
-        fetch(`http://www.omdbapi.com/?apikey=f58da016&s=${searchTitle}&plot=full&type=movie`)
+        fetch(`https://www.omdbapi.com/?apikey=f58da016&s=${searchTitle}&plot=full&type=movie`)
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                // console.log(data)
                 
                 if(data.Response==="True") {
 
