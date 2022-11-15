@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 42px;
+}
+
+#movie-list {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#initial-image {
+    margin: 45px;
+}
+
+
+
+.list-item {
+    
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1.5px solid #E5E7EB;
+    padding: 20px 45px;
+}
+
+.list-item > img {
+    display: block;
+    border-radius: 3px;
+    width: 100px;
+    object-fit: contain;
+    align-self: flex-start;
+    
+}
+
+.movie-info-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-info-container > .title {
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items: center;
+}
+.movie-info-container > .title > .imdb-rating {
+    font-size: 12px;
+    font-weight: 500;
+    padding-left: 7px;
+    
+}
+
+.star-symbol {
+    color: #FEC654;
+    padding-right: 4px;
+}
+
+.movie-info-container > .info {
+    margin-top: 11px;
+    font-size: 12px;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.movie-info-container > .plot {
+    margin-top: 8px;
+    color: #6B7280;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+
+.add-watchlist-btn {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.add-watchlist-btn > img {
+    position: relative;
+    bottom: -2.5px;
+    left: -4px;
+}
+
+
+
+#search-field {
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px;
+    border-color: #D1D5DB;
+    border-width: 1px;
+    font-size: 14px;
+    padding: 9px;
+    margin:0;
+    flex: 1;
+}
+
+#search-btn {
+    border-bottom-right-radius: 6px;
+    border-top-right-radius: 6px;
+    border-color: #D1D5DB;
+    border-width: 1px;
+    font-size: 14px;
+    padding: 9px;
+    margin:0;
+
+    background-color: #F9FAFB;
+
+
+    cursor: pointer;
+    
+}
+
+.container-search {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 45px;
+    position: relative;
+    bottom: 18px;
+}
+
+.container-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+    color: white;
+    padding: 45px;
+
+    background: url("images/posters.jpg"), rgba(0, 0, 0, 0.555);
+    background-blend-mode: multiply;
+    background-size: cover;
+}
+
+.container-main {
+    width: 550px;
+    min-height: 850px;
+    border: 1px black solid;
+    
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+#initial-image {
+    align-self: center;
+    justify-self: center;
+}
